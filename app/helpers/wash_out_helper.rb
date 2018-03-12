@@ -86,7 +86,7 @@ module WashOutHelper
           end
 
           attrs.each do |value|
-            xml.tag! "xsd:attribute", wsdl_occurence(value, false, :name => value.attr_name, :type => value.namespaced_type)
+            xml.tag! "xsd:attribute", wsdl_occurence_no_plain_nillable(value, false, :name => value.attr_name, :type => value.namespaced_type)
           end
         end
 
